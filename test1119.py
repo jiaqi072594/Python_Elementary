@@ -53,3 +53,20 @@ moA = heroRegex4.search('HaHaHaHa')
 
 #findall() 方法 不同于search（）
 
+#字符分类 
+
+#re.compile(r'[aeiou]')与re.compile(r'[^aeiou]')的区别为^为非
+
+#re.compile(r'^Hello') re.compile(r'Hello$') re.compile(r'^%d$')
+
+#通配字符 '.xx'
+
+# .*匹配除换行外的所有字符 带?为非贪心匹配
+
+#re.DOTALL 作为re.compile的第二个参数 可以让.*匹配包括换行的所有字符
+
+#re.IGNORECASE或者re.I作为re.compile的第二参数可以不区分大小写匹配
+
+#sub()方法替代字符串
+
+#re.VERBOSE为re.compile的第二参数时，可以在正则表达式中添加注释
