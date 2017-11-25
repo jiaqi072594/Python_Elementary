@@ -23,3 +23,9 @@ path.split(os.path.sep)返回一个list，内容是路径 OS X和linux系统上�
 如果path参数存在，并且是一个文件，调用os.path.isfile(path)将返回True，否则返回False
 如果path参数存在，并且是一个文件夹，调用os.path.isdir(path)将返回True，否则返回False
 '''
+'''
+#永久删除文件和文件夹
+    用os.unlink(path)将删除path处的文件
+    调用os.rmdir(path)将删除path出的文件夹，该文件夹必须为空，其中没有任何文件和文件夹。
+    
+'''

@@ -1,0 +1,1 @@
+Vel.endswith('.txt')表示.txt结尾的文件
