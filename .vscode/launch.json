@@ -9,7 +9,7 @@
             "type": "python",
             "request": "launch",
             "stopOnEntry": true,
-            "pythonPath": "${config:python.pythonPath}",
+            "pythonPath": "C:\\Users\\ms\\AppData\\Local\\Programs\\Python\\Python36\\python.exe",
             "program": "${file}",
             "cwd": "${workspaceRoot}",
             "env": {},
