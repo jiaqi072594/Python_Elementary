@@ -41,7 +41,7 @@ def simple_plot():
     #生成画布，并设定标题
     plt.figure(figsize=(8,6), dpi=80)#创建一个8*6点（point）的图，并设置分辨率为80
     plt.title(u'简单的曲线图', fontproperties=myfont)
-   plt.
+    plt.grid(True)
 
     #设置X轴
     plt.xlabel(u'X轴', fontproperties=myfont)
