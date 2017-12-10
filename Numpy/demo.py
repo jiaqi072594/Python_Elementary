@@ -136,7 +136,7 @@ import numpy.linalg as nplg
 #特征值、特征向量：
 print (nplg.eig(a))
 
-
+ 
 
 
 
