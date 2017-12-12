@@ -41,13 +41,13 @@ for j in range(start,len(b)-3):
     y.append(int(c[j][y_data])*0.01)
 
 #生成画布，并设定标题
-plt.figure(figsize=(12,9), dpi=80)
+plt.figure(figsize=(16,9), dpi=80)
 plt.title(u'test', fontproperties=myfont)
 plt.grid(True)
 
 #设置X轴
 plt.xlabel(u'X轴/ms', fontproperties=myfont)
-plt.xlim(0, 12000)#设置X轴上下限
+plt.xlim(0, 6000)#设置X轴上下限
 #plt.xticks(1)#设置横轴标记
 
 #设置Y轴
@@ -56,11 +56,11 @@ plt.ylim(0.0, max(y))
 plt. yticks([0.0,max(y)*0.25,max(y)*0.5,max(y)*0.75,max(y)])
 
 #画两条曲线
-plt.plot(x,y, 'b--', linewidth=2.0, label=u'123')#绘制余弦曲线，蓝色，--，宽度为2的曲线
+plt.plot(x,y, 'b-', linewidth=2.0, label=u'123')#绘制余弦曲线，蓝色，--，宽度为2的曲线
 #plt.plot(x,y_sin, 'g-', linewidth=2.0, label=u'sin示例')#绘制余弦曲线，蓝色，-，宽度为2的曲线
 
 #设置图例位置， loc可以为[upper, lower, left, right, center]
-#plt.legend(loc=u'upper left', prop=myfont, shadow=True)#
+plt.legend(loc=u'upper left', prop=myfont, shadow=True)#
     
 #以分辨率72来保存图片
 #plt.savefig('test_save.png', dpi=72 )

@@ -44,7 +44,7 @@ print('>c =\n',c)
 print('>c[:2, 1:] =\n',c[:2, 1:])
 '''
 #二、数组与矩阵运算
-'''
+
 #快速创建数组
 import numpy as np
 np.random.randn(10)#randn创建一个长度为10的一维数组，并且数组里面的值符合标准正态分布
@@ -70,8 +70,9 @@ B = np.mat(b)
 print('A+B =\n',A+B)
 print('A-B =\n',A-B)
 #A*B#会报错，因为矩阵相乘必须满足A的行与B的列个数相等才行
-'''
+
 #三、Array的input和output
+'''
 #使用pickle序列化numpy array
 import pickle
 import numpy as np
@@ -83,3 +84,4 @@ x = np.arange(10)
 #np.load('one_array.npy')
 y = np.arange(20)
 np.savez('two_array.npz',a=x,b=y)#通过numpy的savez把两个数组保存到一个npz压缩文件中，并取名为a,b
+'''
