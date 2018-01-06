@@ -13,30 +13,37 @@ import matplotlib.pyplot as plt
 import matplotlib.mlab as mlab
 import matplotlib.font_manager as fm
 
-'''
-定义一个函数
-输入：path
-处理：
-输出：一个二维度列表，内容为X轴坐标和Y轴坐标
-'''
 
-def get_data(path,data_name,row_mark='\n',col_mark='\t'):
+'''
+打开一个文件，根据给定的行列标记符将数据提取。输入参数添加是否新建excel，返回一个
+data list。
+'''
+def open_file(path,row_mark='\n',col_mark='\t',foundExcel=False):
     if path[-3:] == 'txt':
         data = []
         data_rows = open(path, mode='r', encoding='UTF-8').read().split(row_mark)
         for i in range(len(data_rows)):
             data.append(data_rows[i].split(col_mark))
-        y_title = data[6].index(data_name)
-        start = 21
-        end = data.index(['EOF'])-1
-        x_data = []
-        y_data = []
-        for i in range(start,end):
-            x_data.append(eval(data[i][y_title-1]))
-            y_data.append(eval(data[i][y_title]))
-        return [x_data,y_data]
+        #if foundExcel==True:           
+        return data
     else:
-        print(u'请输入txt文件')
+        return print(u'错误的文件')
+'''
+在data中寻找一个变量名 输出数据
+'''
+def get_data(data,data_name,start=21):
+    y_title = data[6].index(data_name)
+    end = data.index(['EOF'])-1
+    x_data = []
+    y_data = []
+    for i in range(start,end):
+        x_data.append(eval(data[i][y_title-1]))
+        y_data.append(eval(data[i][y_title]))
+    return [x_data,y_data]
+'''
+求一组数据的有效值
+'''
+
        
 def dawn_data(data):
     myfont = fm.FontProperties(fname='C:\\Windows\\Fonts\\simhei.ttf',size=14)
